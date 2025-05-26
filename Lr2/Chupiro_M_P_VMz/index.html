@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+            <div class="side-blur left-side"></div>
+            <div class="side-blur right-side"></div>
+        <header>
+            <h1>WOOD CARVING MOOD</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="nav-link" href="/index.html">Главная</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#inf">О сайте</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="nav-link" href="">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Карусель -->
+            <section class="carousel">
+                <!-- Верхняя часть карусели со слайдом и стрелками пролистывания слайда -->
+                <div id="top">
+                    <!-- Стрелка прокрутки влево -->
+                    <div class="arrow-left"></div>
+                    <!-- Слайды которые будут переключаться -->
+                    <div id="slider">
+                        <a href="/pages/examples.html">
+                            <img src="img/examples.jpg" alt="" class="slider-image block">
+                        </a>
+                        <a href="/pages/tools.html">
+                            <img src="img/tools.jpg" alt="" class="slider-image">
+                        </a>
+                        <a href="/pages/wood_library.html">
+                            <img src="img/wood_liberary.jpg" alt="" class="slider-image">
+                        </a>
+                    </div>
+                    <!-- Стрелка прокрутки вправо -->
+                    <div class="arrow-right"></div>
+                </div>
+                <!-- Нижняя часть карусели с кружками пагинации -->
+                <div id="bottom"></div>
+            </section>
+            <!-- О сайте -->
+            <section class="inf" id="inf">
+                <p class="t">
+                    Сайт был создан для сдачи лабораторной работы, это его оснавная задача.
+                    Концепция сайта - это мини-библиотека, в которой представлено три основных раздела:
+                </p>
+                    <ul class="txt">
+                        <li>Сорта деревьев и их краткая характеристика.</li>
+                        <li>Инструменты для обработки дерева.</li>
+                        <li>Ссылки на видеоуроки для ознакомления с техникой резьбы по дереву.</li>
+                    </ul>
+                <p class="t">
+                    Сайт предназначен как для тех, кто уже занимается резьбой по дереву, так и для новичов, желающих окунуться в это медетативное и творческое занятие.
+                </p>
+            </section>
+        </main>
+        <!-- Подвал с копирайтом -->
+        <footer>
+            <p class="copy">&#169 Все права защищены ООО "Деревянный сайт" 2025г.</p>
+        </footer>
+        <!-- Скрипт -->
+        <script src="js/slider.js"></script>
+    </body>
+</html>

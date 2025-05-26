@@ -1,0 +1,256 @@
+body {
+    background-image: url(../img/les.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.side-blur {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 15vw;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.left-side {
+left: 0;
+}
+
+.right-side {
+    right: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+
+h1 {
+margin: 0;
+color: aliceblue;
+font-size: 5vw;
+}
+
+nav {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: flex;
+    align-items: center;
+    margin-top: -3vh;
+    height: 4vh;
+    background-color: rgba(56, 45, 45, 0.85);
+}
+
+ul {
+list-style-type: none;
+}
+
+h2 {
+margin-top:-10px;
+font-size: 2vw;
+text-align: center;
+}
+
+h3 {
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-top: -0.5vw;
+}
+
+.txt {
+    font-size: 1.2vw;
+    margin-top: -0.8vw;
+    margin-left: -0.5vw;
+    /* list-style-type: circle; */
+}
+
+.nav-link {
+    display: flex;
+    flex: 1;
+    font-size: 1vw;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*Расположение divов в столбец*/
+    row-gap: 30px;
+    height: 45vh;
+    background-color: rgba(209, 215, 179, 0.1);
+}
+
+/* РАБОТА СО СЛАЙДЕРОМ И ЕГО ЭЛЕМЕНТАМИ */
+#top {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#slider {
+    width: 30vw;
+    height: 30vh;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 7px;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.slider-txt {
+    margin-left: 20px;
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.pagination-circle {
+    margin: 5px;
+    width: 23px;
+    height: 23px;
+    border: 2px solid rgb(0, 180, 180);
+    border-radius: 50%;
+}
+
+.active {
+    background-color: rgb(147, 238, 238);
+}
+
+#bottom {
+    display: flex;
+    margin-top: -25px;
+    column-gap: 25px;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    height: 4vh;
+    text-align: center;
+}
+
+.copy {
+    font-size: 1vw;
+}
+
+.t {
+    font-size: 1.2vw;
+    margin-left: 2vw;
+    margin-top: -0.5vw;
+}
+
+.inf {
+    background-color: rgba(179, 255, 230, 0.5);
+}
+
+/* СТРЕЛОЧКB ПРОКРУТКИ */
+/* стиль стрелки влево */
+.arrow-left {
+   position: relative;
+   width: 50px;
+   height: 50px;
+   margin: 10px;
+}
+
+.arrow-left::before,
+.arrow-left::after {
+content: '';
+position: absolute;
+transform: rotate(45deg); /*наклон (направление стрелки)*/
+box-sizing: border-box;
+width: 100%;
+height: 100%;
+border-left: 9px solid rgb(109, 223, 223); /*Толщина линиий*/
+border-bottom: 9px solid rgb(109, 223, 223);
+animation: arrow-left 1.3s linear infinite;
+}
+
+.arrow-left::after {
+animation: aroow-left 1.3s linear infinite -1.5s;
+}
+
+/* Кадры анимации для кнопки влево карусели изображений */
+@keyframes arrow-left {
+    0% {
+        opacity: 0;
+        transform: translate(35px, 0) rotate(45deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-35px, 0) rotate(45deg);
+    }
+}
+/* стиль стрелки вправо */
+.arrow-right {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+ }
+ 
+ .arrow-right::before,
+ .arrow-right::after {
+ content: '';
+ position: absolute;
+ transform: rotate(225deg);
+ box-sizing: border-box;
+ width: 100%;
+ height: 100%;
+ border-left: 9px solid rgb(109, 223, 223);
+ border-bottom: 9px solid rgb(109, 223, 223);
+ animation: arrow-right 1.3s linear infinite;
+ }
+ 
+  .arrow-right::after {
+ animation: aroow-right 1.3s linear infinite -1.5s;
+ }
+
+ /* Кадры анимации для кнопки вправо карусели изображений */
+ @keyframes arrow-right {
+     0% {
+         opacity: 0;
+         transform: translate(-35px, 0) rotate(225deg);
+     }
+     10%, 90% {
+         opacity: 0;
+     }
+     50% {
+         opacity: 1;
+         transform: translate(0, 0) rotate(225deg);
+     }
+     100% {
+         opacity: 0;
+         transform: translate(35px, 0) rotate(225deg);
+     }
+ }
