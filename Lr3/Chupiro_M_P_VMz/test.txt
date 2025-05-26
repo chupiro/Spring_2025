@@ -1,3 +1,2 @@
 Hello World!
 new Test
-new text for test
